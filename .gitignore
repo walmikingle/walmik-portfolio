@@ -1,0 +1,20 @@
+# OS junk
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (not used by this static site, but keeps the repo clean)
+node_modules/
+npm-debug.log*
+
+# Vercel
+.vercel
+
+# Local backup of the previous site (kept on disk, not shipped)
+legacy/

@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Walmik Ingle — Creative Developer — Portfolio</title>
+  <meta name="description" content="Walmik Ingle — Computer Engineering student, Full-Stack Developer and AI/ML engineer building web applications, backend services and Generative AI systems." />
+  <meta name="author" content="Walmik Ingle" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <meta property="og:title" content="Walmik Ingle — Creative Developer" />
+  <meta property="og:description" content="Full-Stack Developer & AI/ML engineer. Explore my work." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader">
+    <div class="loader__pill" id="loaderPill">
+      <span class="loader__bar" id="loaderBar"></span>
+      <span class="loader__text">Walmik Ingle</span>
+    </div>
+    <p class="loader__details" id="loaderDetails">Loading — <span id="loaderPct">0</span>%</p>
+  </div>
+
+  <!-- ============ 3D CANVAS (fixed, full screen) ============ -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ MENU ============ -->
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+    <span class="burger__line burger__line--top"></span>
+    <span class="burger__line burger__line--mid"></span>
+    <span class="burger__line burger__line--bot"></span>
+  </button>
+
+  <a class="social social--top" id="topLinkedin" href="https://www.linkedin.com/in/walmikingle" target="_blank" rel="noopener" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21H9z"/></svg>
+  </a>
+
+  <nav class="menu" id="menu" aria-hidden="true">
+    <div class="menu__panel">
+      <ul class="menu__list">
+        <li><a href="#hero" data-nav>Home</a></li>
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#experience" data-nav>Experience</a></li>
+        <li><a href="#work" data-nav>Projects</a></li>
+        <li><a href="#education" data-nav>Education</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+      <div class="menu__meta">
+        <a href="mailto:inglewalmik68@gmail.com">inglewalmik68@gmail.com</a>
+        <a href="tel:+918767018928">+91 87670 18928</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ SCROLL RAIL ============ -->
+  <div class="rail" aria-hidden="true">
+    <span class="rail__label" id="railLabel">01 / Home</span>
+    <span class="rail__track"><span class="rail__fill" id="railFill"></span></span>
+  </div>
+
+  <!-- ============ CONTENT ============ -->
+  <div class="scroll" id="scroll">
+    <main class="content" id="content">
+
+      <!-- HERO -->
+      <section class="section section--hero" id="hero" data-index="1" data-name="Home" data-theme="dark">
+        <div class="section__inner">
+          <p class="eyebrow" data-reveal>Computer Engineering Student</p>
+          <h1 class="display display--xl" data-reveal>
+            <span class="line">Walmik</span>
+            <span class="line line--outline">Ingle</span>
+          </h1>
+          <p class="hero__sub" data-reveal>Full-Stack Developer &nbsp;/&nbsp; AI · ML · Generative AI</p>
+          <div class="hero__actions" data-reveal>
+            <a class="pill" href="#work" data-nav>View Projects</a>
+            <a class="pill pill--ghost" href="#contact" data-nav>Get in Touch</a>
+          </div>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">
+          <span>Scroll</span>
+          <span class="scroll-cue__line"></span>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about" data-index="2" data-name="About" data-theme="light">
+        <div class="section__inner">
+          <p class="eyebrow" data-reveal>01 — About</p>
+          <h2 class="display display--lg" data-reveal>Building things<br />that think.</h2>
+          <div class="cols">
+            <p class="lede" data-reveal>
+              B.E. Computer Science student with hands-on experience building full-stack web
+              applications, backend services, REST APIs, databases, and AI-powered applications.
+            </p>
+            <p data-reveal>
+              Proficient in JavaScript, Python, FastAPI, Node.js, SQL, MySQL, PostgreSQL and Docker,
+              with experience integrating third-party APIs and building interactive web solutions.
+              Strong AI/ML and Generative AI background including RAG, LLMs, NLP, semantic retrieval,
+              Hugging Face, FAISS, and multimodal document processing.
+            </p>
+          </div>
+          <dl class="facts" data-reveal>
+            <div><dt>Based in</dt><dd>Shivajinagar, Pune 411005</dd></div>
+            <div><dt>Focus</dt><dd>Full-Stack &amp; Generative AI</dd></div>
+            <div><dt>Graduating</dt><dd>March 2027</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section" id="skills" data-index="3" data-name="Skills" data-theme="dark">
+        <div class="section__inner">
+          <p class="eyebrow" data-reveal>02 — Skills</p>
+          <h2 class="display display--lg" data-reveal>Toolkit</h2>
+          <div class="skills" id="skillsGrid">
+            <article class="skill" data-reveal>
+              <h3>Backend &amp; APIs</h3>
+              <p>Node.js · REST APIs · FastAPI · JSON · Authentication · API Integration</p>
+            </article>
+            <article class="skill" data-reveal>
+              <h3>Data &amp; Databases</h3>
+              <p>SQL · MySQL · PostgreSQL · Pandas · NumPy · PyArrow · Parquet</p>
+            </article>
+            <article class="skill" data-reveal>
+              <h3>Programming</h3>
+              <p>JavaScript · React · Python · C++ · Java</p>
+            </article>
+            <article class="skill" data-reveal>
+              <h3>AI / ML</h3>
+              <p>Machine Learning · Generative AI · LLMs · NLP · RAG</p>
+            </article>
+            <article class="skill" data-reveal>
+              <h3>RAG &amp; LLM</h3>
+              <p>Sentence Transformers · LangChain · SPLADE · Re-ranking · Hugging Face · Docling · FAISS · Vector Databases</p>
+            </article>
+            <article class="skill" data-reveal>
+              <h3>Tools &amp; Concepts</h3>
+              <p>Git · GitHub · Docker · DSA · OOP · DBMS · Computer Networks</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="section" id="experience" data-index="4" data-name="Experience" data-theme="light">
+        <div class="section__inner">
+          <p class="eyebrow" data-reveal>03 — Experience</p>
+          <h2 class="display display--lg" data-reveal>Where I've<br />worked</h2>
+
+          <div class="timeline">
+            <article class="job" data-reveal>
+              <header class="job__head">
+                <h3>AI/ML Intern</h3>
+                <span class="job__date">6 Months</span>
+              </header>
+              <p class="job__org">Axior Labs LLP — A Multi-Modal Framework for Tender, Compliance &amp; Risk Assessment</p>
+              <ul class="job__points">
+                <li>Contributed to an AI-driven multi-modal tender intelligence platform for document understanding, compliance assessment and risk analysis, using structured extraction of textual and tabular content.</li>
+                <li>Implemented hybrid retrieval and re-ranking with FAISS dense retrieval, BM25 keyword search, SPLADE sparse embeddings, and Cross-Encoder models for evidence-based information retrieval.</li>
+                <li>Integrated Qwen3-30B-A3B-Instruct via Hugging Face Router into a grounded RAG pipeline for contextual question answering, source attribution, and hallucination-aware responses.</li>
+              </ul>
+            </article>
+
+            <article class="job" data-reveal>
+              <header class="job__head">
+                <h3>Green AI Intern</h3>
+                <span class="job__date">23 Dec 2025 — 17 Jan 2026</span>
+              </header>
+              <p class="job__org">Shell Plc &amp; Edunet Foundation</p>
+              <ul class="job__points">
+                <li>Applied Green AI principles in Python to help optimize model efficiency and reduce computational cost, gaining hands-on exposure to sustainable AI/ML workflows.</li>
+                <li>Analyzed data and evaluated sustainable AI approaches for energy-related use cases, gaining practical exposure to applied machine learning and efficiency-focused model development.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" id="work" data-index="5" data-name="Projects" data-theme="dark">
+        <div class="section__inner">
+          <p class="eyebrow" data-reveal>04 — Projects</p>
+          <h2 class="display display--lg" data-reveal>Selected<br />work</h2>
+
+          <div class="projects" id="projects">
+            <article class="project" data-reveal>
+              <span class="project__num">01</span>
+              <div class="project__body">
+                <h3>Predictive Maintenance for Data Centre Hard Drives</h3>
+                <p>
+                  An XGBoost-based predictive maintenance system estimating the Remaining Useful Life
+                  (RUL) of enterprise hard drives from S.M.A.R.T. telemetry data.
+                </p>
+                <ul class="project__points">
+                  <li>Processed 34,116 telemetry records across 25 features using Pandas, NumPy, PyArrow and Parquet.</li>
+                  <li>Achieved <strong>MAE of 12.0 days</strong> and <strong>RMSE of 15.2 days</strong> on the test set.</li>
+                  <li>Estimated <strong>19.56 tonnes of CO₂ savings</strong> across 978 failed drives by enabling ~1 year of additional utilization.</li>
+                </ul>
+                <ul class="tags">
+                  <li>Python</li><li>XGBoost</li><li>Scikit-learn</li><li>Pandas</li>
+                  <li>NumPy</li><li>PyArrow</li><li>Parquet</li><li>FastAPI</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project" data-reveal>
+              <span class="project__num">02</span>
+              <div class="project__body">
+                <h3>Travel Sphere — Travel Planning Web Application</h3>
+                <p>
+                  A full-stack travel planning web application for exploring destinations and planning
+                  trips through an interactive web interface.
+                </p>
+                <ul class="project__points">
+                  <li>Implemented user authentication (login / signup) and an interactive chatbot for travel queries.</li>
+                  <li>Integrated third-party maps, weather and destination APIs for dynamic, location-based information.</li>
+                </ul>
+                <ul class="tags">
+                  <li>HTML</li><li>CSS</li><li>JavaScript</li><li>MySQL</li><li>Node.js</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="section" id="education" data-index="6" data-name="Education" data-theme="light">
+        <div class="section__inner">
+          <p class="eyebrow" data-reveal>05 — Education</p>
+          <h2 class="display display--lg" data-reveal>PES Modern College<br />of Engineering, Pune</h2>
+          <div class="cols">
+            <p class="lede" data-reveal>B.E. in Computer Engineering</p>
+            <p data-reveal>Expected Graduation — March 2027</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section--contact" id="contact" data-index="7" data-name="Contact" data-theme="dark">
+        <div class="section__inner">
+          <p class="eyebrow" data-reveal>06 — Contact</p>
+          <h2 class="display display--xl" data-reveal>
+            <span class="line">Let's build</span>
+            <span class="line line--outline">something</span>
+          </h2>
+          <a class="mailto" href="mailto:inglewalmik68@gmail.com" data-reveal>inglewalmik68@gmail.com</a>
+          <div class="hero__actions" data-reveal>
+            <a class="pill" href="mailto:inglewalmik68@gmail.com">Email me</a>
+            <a class="pill pill--ghost" href="tel:+918767018928">+91 87670 18928</a>
+          </div>
+          <footer class="footer">
+            <span>© 2026 Walmik Ingle</span>
+            <span>Shivajinagar, Pune 411005</span>
+            <span>Built with Three.js</span>
+          </footer>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="vendor/three.min.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
